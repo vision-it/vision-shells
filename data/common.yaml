@@ -1,0 +1,4 @@
+---
+vision_shells::zsh::manage_zsh_package: false
+vision_shells::zsh::zsh_package_name: 'zsh'
+
