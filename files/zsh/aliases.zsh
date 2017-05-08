@@ -1,6 +1,6 @@
 # This file is managed by Puppet; All changes will be undone
 
-alias e='emacs -nw'
+alias e='zile'
 alias shipit='puppet agent -t'
 alias deploy='r10k deploy environment -pv'
 alias upgrade='apt update && apt upgrade && apt-get autoremove && apt-get clean'

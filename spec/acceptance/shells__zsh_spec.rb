@@ -41,7 +41,7 @@ describe 'vision_shells::zsh' do
     describe file('/root/.oh-my-zsh/custom/aliases.zsh') do
       it { is_expected.to be_file }
       it { is_expected.to contain 'This file is managed by Puppet' }
-      it { is_expected.to contain "alias e='emacs" }
+      it { is_expected.to contain "alias e='zile" }
     end
   end
 
