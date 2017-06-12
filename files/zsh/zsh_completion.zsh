@@ -1,7 +1,4 @@
-# Warning: This file is managed by puppet; DO NOT EDIT
-# ====================================================
-# Path:          files/zsh/zsh_completion.zsh
-# Last Modified: Fri, 17.06.2016 - 10:04:27
+# Warning: This file is managed by puppet
 
 # Add a custom config with: menu_complete
 # On an ambiguous completion, instead of listing possibilities or beeping,

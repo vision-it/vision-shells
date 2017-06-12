@@ -1,7 +1,22 @@
+# Class: vision_shells_zsh
+# ===========================
+#
 # Install and configure zsh
+#
+# Parameters
+# ----------
+#
+# Examples
+# --------
+#
+# @example
+# contain ::vision_shells::zsh
+#
 class vision_shells::zsh (
+
   Boolean $manage_zsh_package,
   String  $zsh_package_name,
+
 ){
 
   if $manage_zsh_package {
