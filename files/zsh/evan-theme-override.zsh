@@ -1,11 +1,10 @@
-# Warning: This file is managed by puppet; DO NOT EDIT
-# ====================================================
-# Path:          files/zsh/evan-theme-override.zsh
-# Last Modified: Fri, 17.06.2016 - 10:04:47
-
+# Warning: This file is managed by puppet
 # Override the 'evan'-theme to accomidate our FQDN naming scheme
+
 HOST="$(hostname -f | cut -f 1 -d .)"
 ENV="$(hostname -f | cut -f 2 -d .)"
+LOC="$(facter location.)"
+
 if [[ $ENV == 'dev' ]]; then
     HOSTENV=$HOST'.%{$fg[green]%}dev%{$reset_color%}'
 elif [[ $ENV == 'stg' ]]; then
@@ -13,4 +12,5 @@ elif [[ $ENV == 'stg' ]]; then
 else
     HOSTENV=$HOST'.%{$fg[black]%}%{$bg[red]%}prd%{$reset_color%}'
 fi
-PROMPT="$HOSTENV :: %2~ %B»%b "
+
+PROMPT="$HOSTENV ($LOC) :: %2~ %B»%b "
