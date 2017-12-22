@@ -8,7 +8,7 @@ gem 'rake', '12.0.0'
 gem 'rspec-puppet', '2.6.7'
 
 group :rubocop do
-  gem 'rubocop', '0.47.0'
+  gem 'rubocop', '0.51.0'
   gem 'rubocop-rspec', '1.10.0'
 end
 
