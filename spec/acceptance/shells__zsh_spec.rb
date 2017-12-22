@@ -3,9 +3,9 @@ require 'spec_helper_acceptance'
 describe 'vision_shells::zsh' do
   context 'with defaults' do
     it 'idempotentlies run' do
-      pp = <<-EOS
+      pp = <<-FILE
         class { 'vision_shells::zsh': }
-      EOS
+      FILE
 
       apply_manifest(pp, catch_failures: true)
       apply_manifest(pp, catch_changes: true)
