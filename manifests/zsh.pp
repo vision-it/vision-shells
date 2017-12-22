@@ -21,7 +21,7 @@ class vision_shells::zsh (
 
   if $manage_zsh_package {
     package { $zsh_package_name:
-      ensure => 'installed',
+      ensure => present,
       before => Ohmyzsh::Install['root'],
     }
   }
@@ -35,16 +35,12 @@ class vision_shells::zsh (
     theme   => 'evan',
   }
 
-  ::ohmyzsh::plugins { 'root':
-    plugins => 'git',
-  }
-
   file { '/root/.oh-my-zsh/custom/puppet.zsh':
     ensure  => present,
     owner   => root,
     group   => root,
     mode    => '0644',
-    source  => 'puppet:///modules/vision_shells/zsh/zsh_completion.zsh',
+    content => file('vision_shells/zsh/zsh_completion.zsh'),
     require => File['/root/.oh-my-zsh/custom'],
   }
 
@@ -64,8 +60,8 @@ class vision_shells::zsh (
   }
 
   file { '/root/.oh-my-zsh/custom/themes/evan.zsh-theme':
-    ensure => present,
-    source => 'puppet:///modules/vision_shells/zsh/evan-theme-override.zsh',
+    ensure  => present,
+    content => file('vision_shells/zsh/evan-theme-override.zsh'),
   }
 
   file { '/root/.oh-my-zsh/custom/path.zsh':
@@ -76,7 +72,7 @@ class vision_shells::zsh (
 
   file { '/root/.oh-my-zsh/custom/aliases.zsh':
     ensure  => present,
-    source  => 'puppet:///modules/vision_shells/zsh/aliases.zsh',
+    content => file('vision_shells/zsh/aliases.zsh'),
     require => File['/root/.oh-my-zsh/custom'],
   }
 
