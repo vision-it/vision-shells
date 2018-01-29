@@ -13,4 +13,4 @@ else
     HOSTENV=$HOST'.%{$fg[black]%}%{$bg[red]%}prd%{$reset_color%}'
 fi
 
-PROMPT="$HOSTENV ($LOC) :: %2~ %B»%b "
+PROMPT="$HOSTENV ($LOC) :: %2~ %B:%b "
