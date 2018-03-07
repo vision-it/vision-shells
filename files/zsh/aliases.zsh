@@ -7,3 +7,4 @@ alias deploy_r10k='r10k deploy environment -pv'
 alias upgrade='apt update && apt upgrade && apt-get autoremove && apt-get clean'
 alias postrun='/etc/puppetlabs/r10k/postrun/postrun.py'
 alias bconsole='docker exec -it bareos-director bconsole'
+alias apply="/opt/puppetlabs/bin/puppet apply --test /etc/puppetlabs/code/environments/production/manifests/site.pp"
