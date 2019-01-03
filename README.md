@@ -7,8 +7,8 @@
 Include in the *Puppetfile*:
 
 ```
-mod vision_apt:
-    :git => 'https://github.com/vision-it/vision-zsh.git,
+mod vision_shells:
+    :git => 'https://github.com/vision-it/vision-shells.git,
     :ref => 'production'
 ```
 
@@ -16,4 +16,5 @@ Include in a role/profile:
 
 ```puppet
     contain ::vision_shells::zsh
+    contain ::vision_shells::fish
 ```
