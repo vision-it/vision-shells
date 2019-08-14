@@ -2,6 +2,7 @@
 # ===========================
 #
 # Install and configure zsh
+# HINT: Legacy. zsh is now in defaults
 #
 # Parameters
 # ----------
